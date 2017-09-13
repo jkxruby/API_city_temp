@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170913023915) do
+ActiveRecord::Schema.define(version: 20170913064138) do
 
-  create_table "companies", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
     t.string   "juhe_id"
-    t.string   "company"
-    t.string   "current_trade"
-    t.string   "symbol"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["juhe_id"], name: "index_companies_on_juhe_id"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.string   "current_temp"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["juhe_id"], name: "index_cities_on_juhe_id"
   end
 
 end
